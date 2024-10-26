@@ -2,6 +2,7 @@
 
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
+
 export const SearchInput = () => {
     return (
         <div className="relative">

@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
+
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 
 import {ClerkProvider} from '@clerk/nextjs'
 import "./globals.css";
+
 import { Children } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
+
+import {cn} from '@/lib/utils';
+
 const inter = Inter({subsets: ['latin']})
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,7 +38,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
-      <body className= {inter.className}>
+      <body className= {cn ("bg-secondary", inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         {children}
         </ThemeProvider>
