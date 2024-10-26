@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import {UserButton} from "@clerk/nextjs";
 import {Button} from "@/components/ui/button";
 import { ModeToggle } from "./mode-toggle";
+import { MobileSidebar } from "./mobile-sidebar";
 
 const font = Poppins({
     weight: "600",
